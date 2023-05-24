@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Thought = require('./thoughtsModel')
 
 // Schema to create User model
 const userSchema = new Schema({
@@ -14,15 +15,25 @@ const userSchema = new Schema({
         unique: true,
         match: /.+\@.+\..+/,
     },
-    //   thoughts: ,
-    //   friends: ,
+    // Array of _id values referencing the Thought model
+    thoughts: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Thought',
+        },
+    ],
+    //Array of _id values referencing the User model (self-reference)
+    friends: [
+        {
+            type : mongoose.Schema.Types.ObjectId, 
+            ref: 'User',
+        },
+    ],
     }
 );
   
-// model defined based on the schema to create documents
-const User = model('User', userSchema);
 
-// some seed data
+// some seed data for the docs
 User
     .create([
         { username: 'bigbro', email: 'gmail@google.com' },
@@ -35,5 +46,17 @@ User
     .catch(error => {
         console.error(error);
     });
+
+// Create a virtual property `commentCount` that gets the amount of comments per post
+userSchema.virtual('friendCount')
+    .get(function () {
+        let friendAmt = this.friends.length;
+        console.log(friendAmt);
+        return friendAmt;
+    });
+  
+// Initialize User model
+// model defined based on the schema to create documents
+const User = model('User', userSchema);
 
 module.exports = User;
