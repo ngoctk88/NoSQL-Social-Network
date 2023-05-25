@@ -1,5 +1,6 @@
+// index.js
 const express = require('express');
-const db = require('./config/connection');
+const db = require('./config/connection'); // Assuming your connection.js file is in the config folder
 const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;

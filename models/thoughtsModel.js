@@ -44,4 +44,17 @@ thoughtSchema.virtual('reactionCount')
 // Initialize Thoughts model
 const Thought = model('Thought', thoughtSchema);
 
+Thought
+    .create([
+        { thoughtText: 'Lorem ipsum dolor sit amet..', username: 'bigbro' },
+        { thoughtText: 'consectetur adipiscing elit, sed do eiusmod tempor.', username: 'bigbro' },
+        { thoughtText: 'incididunt ut labore et dolore magna aliqua', username: 'officesweet' }
+    ])
+    .then(createdUsers => {
+        console.log(createdUsers);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
 module.exports = Thought;
