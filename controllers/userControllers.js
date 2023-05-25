@@ -33,7 +33,7 @@ module.exports = {
             .then((user) =>
               !user
                 ? res.status(404).json({ message: 'Bummer. No such user exists. :(' })
-                : res.json(video)
+                : res.json(user)
             )
             .catch((err) => {
               console.log(err);
