@@ -1,7 +1,5 @@
+const router = require('express').Router();
 
 
-// models
-const { User, Reaction, Thought } = require('../../models')
 
-
-module.exports = ;
+module.exports = router;
