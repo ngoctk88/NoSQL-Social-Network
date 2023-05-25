@@ -7,7 +7,6 @@ const {
     deleteUser,
     addThought,
     addFriend,
-    deleteThought,
   } = require('../../controllers/userController');
 
 // /api/users
@@ -22,12 +21,7 @@ const {
 
     // GET a single user by its _id and populated thought and friend data
     router.route('/:userId/thoughts').post(addThought);
-
     router.route('/:userId/friends').post(addFriend);
-
-    // BONUS: Remove a user's associated thoughts when deleted. 
-    router.route('/:userId/thoughts/:thoughtId').delete(deleteThought);
-
 
 
 
