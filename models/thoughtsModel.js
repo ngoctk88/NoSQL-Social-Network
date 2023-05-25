@@ -22,11 +22,8 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        reactions: {
-            // Array of nested documents created with the reactionSchema
-            type: Schema.Types.ObjectId,
-            ref: 'Reaction',
-        },
+        reactions: [reactionSchema], // Use reactionSchema as a nested subdocument
+        //indicate that the reactions field in the Thought schema will contain an array of Reaction subdocuments.
     },
     {
         timestamps: true,
@@ -44,8 +41,7 @@ thoughtSchema.virtual('reactionCount')
     });
 
 
-// Initialize User model
-// model defined based on the schema to create documents
+// Initialize Thoughts model
 const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;

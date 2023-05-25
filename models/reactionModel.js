@@ -5,9 +5,9 @@ const reactionSchema = new Schema(
     {
         reactionId: {
             //Use Mongoose's ObjectId data type
-            type: ObjectId,
+            type: Schema.Types.ObjectId,
             //Default value is set to a new ObjectId
-            default: ,
+            default: () => new Types.ObjectId(),
         },
         reactionBody: {
             type: String,
@@ -22,20 +22,19 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             //Set default value to the current timestamp
-            default: Date.now(),
+            default: Date.now,
             //Use a getter method to format the timestamp on query
             get: timestamp => new Date(timestamp).toISOString(),
         },
     },
     {
         timestamps: true,
-        toJSON: { getters: true, virtuals: true },
+        toJSON: { getters: true },
         id: false,
     },
 );
 
-// Initialize User model
-// model defined based on the schema to create documents
+// Initialize Reaction model
 const Reaction = model('Reaction', reactionSchema);
 
 module.exports = Reaction;
