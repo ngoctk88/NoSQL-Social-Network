@@ -7,14 +7,16 @@ const thoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: true,
-            //Must be between 1 and 280 characters,
+            //Must be between 1 and 280 characters"
+            minlength: 1,
+            maxlength: 280,
         },
-        email: {
+        createdAt: {
             type: Date,
             //Set default value to the current timestamp
             default: Date.now(),
             //Use a getter method to format the timestamp on query
-            get: (date)
+            get: timestamp => new Date(timestamp).toISOString(),
         },
         username: {
             type: String,
@@ -33,10 +35,7 @@ const thoughtSchema = new Schema(
     },
 );
 
-//date things
-thoughtSchema.path('default') instanceof mongoose.Date; // true
-
-// Create a virtual property `commentCount` that gets the amount of comments per post
+// Create a virtual property `reactionCount` that gets the amount of reactions per thought
 thoughtSchema.virtual('reactionCount')
     .get(function () {
         let reactionAmt = this.reactions.length;
