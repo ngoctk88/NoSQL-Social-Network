@@ -23,7 +23,7 @@ const {
     router.route('/:userId/thoughts').post(addThought);
     router.route('/:userId/friends').post(addFriend);
 
-
+module.exports = router;
 
 
 

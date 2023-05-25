@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-//const Reaction = require('./reactionModel');
+const { reactionSchema } = require('./reactionModel');
 
 // Schema to create Thought model
 const thoughtSchema = new Schema(
@@ -23,7 +23,7 @@ const thoughtSchema = new Schema(
             required: true,
         },
         reactions: [reactionSchema], // Use reactionSchema as a nested subdocument
-        //indicate that the reactions field in the Thought schema will contain an array of Reaction subdocuments.
+        //indicates that the reactions field in the Thought schema will contain an array of Reaction subdocuments.
     },
     {
         timestamps: true,
