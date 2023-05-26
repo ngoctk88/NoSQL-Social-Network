@@ -14,6 +14,7 @@ const {
     // GET all users
     // POST a new user:
     router.route('/').get(getUsers).post(createUser);
+    
     // GET a single user by its _id 
     // PUT to update a user by its _id
     // DELETE to remove user by its _id
