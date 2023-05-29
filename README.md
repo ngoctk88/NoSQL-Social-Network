@@ -90,11 +90,20 @@ This project is licensed under MIT.
 ## Credits
 
 ### Georgia Tech Staff
-- My instructor, [Saurav Khatiwada](https://github.com/khatiwadasaurav).
+My instructor, [Saurav Khatiwada](https://github.com/khatiwadasaurav).
 
 ### Example Code
+- GitHub: [njthanhtrang](https://github.com/njthanhtrang/18.-NoSQL-Challenge-Social-Network-API/blob/main/controllers/user-controller.js)
 
 ### Tutorials
+- freeCodeCamp: [Introduction to Mongoose for MongoDB](https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/)
+- Mastering JS: [How to Validate Unique Emails with Mongoose](https://masteringjs.io/tutorials/mongoose/mongoose-validate-unique-email)
+- MongoDB: [CRUD Operations](https://www.mongodb.com/docs/manual/crud/)
+- Mozilla: [Express Tutorial Part 4: Routes and controllers](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+- StackOverflow: [How To Create Mongoose Schema with Array of Object IDs?](https://stackoverflow.com/questions/22244421/how-to-create-mongoose-schema-with-array-of-object-ids)
+- StackOverflow: [how to use getter or setter with mongoose timestamps?](https://stackoverflow.com/questions/70724966/how-to-use-getter-or-setter-with-mongoose-timestamps)
+- StackOverflow: [Removing white spaces (leading and trailing) from string value](https://stackoverflow.com/questions/23903785/removing-white-spaces-leading-and-trailing-from-string-value)
+- StackOverflow: [Route.get() requires callback functions but got a "object Undefined"](https://stackoverflow.com/questions/36558909/route-get-requires-callback-functions-but-got-a-object-undefined)
 
 ### Node Dependencies
 
@@ -108,9 +117,11 @@ Click links to read the documentation for each dependency:
 
 
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 ![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/mongoose-%23CF4647.svg?style=for-the-badge&logo=mongoose&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
