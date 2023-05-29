@@ -50,8 +50,8 @@ Thought
         { thoughtText: 'consectetur adipiscing elit, sed do eiusmod tempor.', username: 'bigbro' },
         { thoughtText: 'incididunt ut labore et dolore magna aliqua', username: 'officesweet' }
     ])
-    .then(createdUsers => {
-        console.log(createdUsers);
+    .then(createdThoughts => {
+        console.log(createdThoughts);
     })
     .catch(error => {
         console.error(error);

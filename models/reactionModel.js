@@ -37,4 +37,17 @@ const reactionSchema = new Schema(
 // Initialize Reaction model
 const Reaction = model('Reaction', reactionSchema);
 
+Reaction
+    .create([
+        { reactionBody: 'Cool!', username: 'SJisALIVE' },
+        { reactionBody: 'Awesome.', username: 'officesweet' },
+        { reactionBody: 'WOW!', username: 'SJisALIVE' }
+    ])
+    .then(createdReaction => {
+        console.log(createdReaction);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
 module.exports = { reactionSchema };
