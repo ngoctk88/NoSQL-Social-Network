@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types } = require('mongoose');
 
 // Schema to create Reaction model
 const reactionSchema = new Schema(
@@ -35,19 +35,20 @@ const reactionSchema = new Schema(
 );
 
 // Initialize Reaction model
-const Reaction = model('Reaction', reactionSchema);
+// const Reaction = model('Reaction', reactionSchema);
 
-Reaction
-    .create([
-        { reactionBody: 'Cool!', username: 'SJisALIVE' },
-        { reactionBody: 'Awesome.', username: 'officesweet' },
-        { reactionBody: 'WOW!', username: 'SJisALIVE' }
-    ])
-    .then(createdReaction => {
-        console.log(createdReaction);
-    })
-    .catch(error => {
-        console.error(error);
-    });
+// Reaction
+//     .create([
+//         { reactionBody: 'Cool!', username: 'SJisALIVE' },
+//         { reactionBody: 'Awesome.', username: 'officesweet' },
+//         { reactionBody: 'WOW!', username: 'SJisALIVE' }
+//     ])
+//     .then(createdReaction => {
+//         console.log(createdReaction);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//         res.status(500).json(err)
+//     });
 
 module.exports = { reactionSchema };

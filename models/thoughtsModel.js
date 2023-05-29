@@ -53,8 +53,9 @@ Thought
     .then(createdThoughts => {
         console.log(createdThoughts);
     })
-    .catch(error => {
-        console.error(error);
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
     });
 
 module.exports = Thought;

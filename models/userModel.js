@@ -57,8 +57,9 @@ User
     .then(createdUsers => {
         console.log(createdUsers);
     })
-    .catch(error => {
-        console.error(error);
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err)
     });
 
 module.exports = User;
