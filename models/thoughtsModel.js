@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const { reactionSchema } = require('./reactionModel');
 
+
 // Schema to create Thought model
 const thoughtSchema = new Schema(
     {
@@ -55,7 +56,6 @@ Thought
     })
     .catch((err) => {
         console.log(err);
-        res.status(500).json(err)
     });
 
 module.exports = Thought;

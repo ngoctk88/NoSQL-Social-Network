@@ -80,7 +80,7 @@ MONGODB_URI = '(mongodbconnection)/mydatabase'
 
 ## Demo
 
-Please see the demo on [YouTube]().
+Please see the demo on [YouTube](https://youtu.be/CzLSilbr5A0).
 
 ## Contributing
 

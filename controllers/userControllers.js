@@ -21,7 +21,7 @@ module.exports = {
     // POST: create a new user
     createUser(req, res) {
         User.create(req.body)
-            .then((dbUserData) => res.json(dbUserData))
+            .then((user) => res.json(user))
             .catch((err) => res.status(500).json(err));
     },
     updateUser(req, res) {
@@ -42,20 +42,14 @@ module.exports = {
     },
     // DELETE a user and remove thoughts
     deleteUser(req, res) {
-        User.findOneAndRemove({ _id: req.params.userId })
+        User
+            .findOneAndRemove({ _id: req.params.userId })
             .then((user) =>
-                !user
-                    ? res.status(404).json({ message: 'Bummer. No such user exists. :(' })
-                    : User.findOneAndUpdate(
-                        { users: req.params.userId },
-                        { $pull: { users: req.params.userId } },
-                        { new: true }
-                    )
+            !user
+                ? res.status(404).json({ message: 'Bummer. No such user exists. :(' })
+                : // Remove a user's associated thoughts when deleted.
+                  Thought.deleteMany({ _id: req.params.userId })
             )
-            // BONUS: Remove a user's associated thoughts when deleted.
-            .then(() => {
-                return Thought.deleteMany({ username: req.params.userId });
-            })
             .then((thought) =>
                 !thought
                     ? res.status(404).json({
