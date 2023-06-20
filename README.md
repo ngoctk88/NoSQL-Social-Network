@@ -1,7 +1,7 @@
-# NoSQL Social Network
+# Thought: NoSQL Social Network
 
 ## Description
-This is an API for a social network web application where users can share thoughts, react and create a friend list. Express.js is used for routing. MongoDB is used for the database along with Mongoose ODM
+An API for a social network web application where users can share thoughts, react and create a friend list. Express.js is used for routing. MongoDB is used for the database along with Mongoose ODM
 
 ## Table of Contents
 - [NoSQL Social Network](#NoSQL-Social-Network)
